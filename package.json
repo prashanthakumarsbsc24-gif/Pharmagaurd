@@ -1,0 +1,25 @@
+{
+  "name": "pharmaguard",
+  "version": "2.0.0",
+  "description": "PharmaGuard: pharmaceutical batch, expiry and loss tracking (React + Express + MongoDB)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,web -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "seed": "npm run seed --prefix server",
+    "migrate:legacy": "npm run migrate:legacy --prefix server",
+    "test": "npm test --prefix server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashanthakumarsbsc24-gif/PharmaGuard.git"
+  },
+  "license": "ISC",
+  "bugs": { "url": "https://github.com/prashanthakumarsbsc24-gif/PharmaGuard/issues" },
+  "homepage": "https://github.com/prashanthakumarsbsc24-gif/PharmaGuard#readme",
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

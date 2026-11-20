@@ -1,0 +1,5 @@
+node_modules
+.env
+data/legacy-export.json
+*.db
+*.log

@@ -1,0 +1,68 @@
+:root {
+  --ink: #10201d;
+  --muted: #566863;
+  --canvas: #eef2f0;
+  --surface: #ffffff;
+  --surface-2: #f5f8f7;
+  --line: #d8e1dd;
+  --line-soft: #e7eeea;
+
+  --pine-950: #06211d;
+  --pine-900: #082a25;
+  --pine-800: #0c3a33;
+  --pine-700: #0a5548;
+  --pine-600: #0b6b5c;
+  --pine-500: #12846f;
+  --mint-300: #6fd3bb;
+  --mint-100: #d6efe7;
+  --mint-50: #ecf7f3;
+
+  --expired: #b42318;   --expired-bg: #fdecea;   --expired-fill: #c9372c;
+  --critical: #b54708;  --critical-bg: #fff0de;  --critical-fill: #e0701a;
+  --warning: #8a5a00;   --warning-bg: #fdf3cf;   --warning-fill: #e5b020;
+  --optimal: #187a4c;   --optimal-bg: #e4f4ea;   --optimal-fill: #2f9e69;
+  --info: #1d4ed8;      --info-bg: #e8efff;
+
+  --font-display: 'Bricolage Grotesque Variable', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --r-control: 8px;
+  --r-panel: 12px;
+  --r-dialog: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font: 400 15px/1.5 var(--font-body);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.015em; line-height: 1.15; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+code { font-family: var(--font-mono); }
+ol, ul { margin: 0; padding: 0; list-style: none; }
+
+:focus-visible { outline: 2px solid var(--pine-500); outline-offset: 2px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: 12px; top: -48px; z-index: 100; background: var(--pine-900); color: #fff;
+  padding: 10px 14px; border-radius: var(--r-control); text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+.muted { color: var(--muted); }
+.nowrap { white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
